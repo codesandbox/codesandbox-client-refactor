@@ -1,0 +1,42 @@
+{
+  "name": "codesandbox-refactors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "editor": "node ./node_modules/reactive-app/bin-dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jest": "^26.0.19",
+    "babel-jest": "^26.6.3",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-config-standard": "latest",
+    "eslint-config-standard-jsx": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-promise": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-standard": "latest",
+    "eslint-plugin-typescript": "latest",
+    "jest": "^26.6.3",
+    "parcel-bundler": "latest",
+    "prettier": "latest",
+    "typescript": "latest",
+    "typescript-eslint-parser": "latest"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.20",
+    "mobx": "^6.0.4",
+    "query-string": "^6.13.8"
+  }
+}
