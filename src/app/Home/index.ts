@@ -1,16 +1,16 @@
-import { Factory, Feature, View } from "reactive-app"
+import { Factory, Feature, TFeature } from "reactive-app"
 
-export interface Home extends Feature, Factory, View {}
+import type { Auth } from "../Auth"
+
+export interface Home extends Feature, Factory {}
 
 export class Home {
-  static mixins = ["Feature", "Factory", "View"]
+  static mixins = ["Feature", "Factory"]
+  readonly auth!: TFeature<typeof Auth>
 
   constructor() {
-    this.render(document.body)
-  }
-
-  render(parent: HTMLElement) {
-    const $ = this.html`<h1>Hello World</h1>`
-    $.appendTo(parent)
+    this.injectFeatures({
+      auth: "Auth",
+    })
   }
 }

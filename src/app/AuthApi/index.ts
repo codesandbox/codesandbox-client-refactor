@@ -23,4 +23,8 @@ export class AuthApi {
   }
 
   revokeToken(jwt: string) {}
+
+  signout() {
+    return this.restApi.delete(`/users/signout`)
+  }
 }

@@ -15,6 +15,7 @@ export class Environment {
   apiEndpoint: string
   useDevelopmentAuthentication: boolean
   authenticationEndpoint: string
+  authenticationCliEndpoint: string
 
   constructor() {
     switch (process.env.NODE_ENV) {
@@ -22,11 +23,15 @@ export class Environment {
         this.apiEndpoint = "https://codesandbox.io/api"
         this.useDevelopmentAuthentication = true
         this.authenticationEndpoint = `${location.origin}/auth/dev?version=2`
+        this.authenticationCliEndpoint = "https://codesandbox.io/cli/login"
+        break
       }
       case Env.PRODUCTION: {
         this.apiEndpoint = "https://codesandbox.io/api"
         this.useDevelopmentAuthentication = false
         this.authenticationEndpoint = `${location.origin}/auth/github?version=2`
+        this.authenticationCliEndpoint = "https://codesandbox.io/cli/login"
+        break
       }
     }
   }
